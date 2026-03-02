@@ -753,6 +753,168 @@
             line-height: 1.7;
         }
 
+        /* ===== SECTION CONTENU LOCAL ===== */
+        .local-content-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .local-content-inner {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .local-content-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .local-content-text p {
+            font-size: 1.0625rem;
+            color: var(--color-text-secondary);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .local-content-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .local-content-text strong {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        .local-highlight {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .local-highlight h3 {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .zones-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .zones-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .zones-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .zone-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, rgba(26, 77, 122, 0.1) 0%, rgba(37, 99, 168, 0.1) 100%);
+            color: var(--color-primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        /* ===== SECTION FAQ ===== */
+        .faq-section {
+            padding: 6rem 0;
+            background: var(--color-background);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .faq-item[open] {
+            border-color: var(--color-accent);
+            box-shadow: 0 4px 20px rgba(26, 77, 122, 0.08);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            cursor: pointer;
+            list-style: none;
+            line-height: 1.4;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--color-primary);
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+            line-height: 1;
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.25rem;
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            line-height: 1.65;
+            border-top: 1px solid var(--color-border);
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .local-content-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ===== SECTION SERVICES ===== */
         .services-section {
             padding: 6rem 0;
