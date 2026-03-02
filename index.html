@@ -61,6 +61,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Dégradé SVG global (réutilisé par les cercles) -->
+    <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <defs>
+            <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0f2d4a"/>
+                <stop offset="50%" stop-color="#1a4d7a"/>
+                <stop offset="100%" stop-color="#2563a8"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo-text">PRASSETS</div>
@@ -218,25 +229,59 @@
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-big">+50</span>
+
+                <div class="stat-circle-card">
+                    <div class="circle-wrapper">
+                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="65"/>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="stat-big" data-target="50" data-prefix="+" data-suffix="" data-decimals="0">+50</span>
+                        </div>
+                    </div>
                     <span class="stat-desc">clients accompagnés</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-card">
-                    <span class="stat-big">2,5M€</span>
+
+                <div class="stat-circle-card">
+                    <div class="circle-wrapper">
+                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="80"/>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="stat-big" data-target="2.5" data-prefix="" data-suffix="M€" data-decimals="1">2,5M€</span>
+                        </div>
+                    </div>
                     <span class="stat-desc">d'encours sous gestion</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-card">
-                    <span class="stat-big">100%</span>
+
+                <div class="stat-circle-card">
+                    <div class="circle-wrapper">
+                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="100"/>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="stat-big" data-target="100" data-prefix="" data-suffix="%" data-decimals="0">100%</span>
+                        </div>
+                    </div>
                     <span class="stat-desc">indépendant, sans conflit d'intérêt</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-card">
-                    <span class="stat-big">Gratuit</span>
+
+                <div class="stat-circle-card">
+                    <div class="circle-wrapper">
+                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="100"/>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="stat-big stat-text">Gratuit</span>
+                        </div>
+                    </div>
                     <span class="stat-desc">premier rendez-vous, sans engagement</span>
                 </div>
+
             </div>
         </div>
     </section>

@@ -631,7 +631,7 @@
 
         /* ===== SECTION CHIFFRES CLÉS ===== */
         .stats-section {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: white;
             border-top: 1px solid var(--color-border);
             border-bottom: 1px solid var(--color-border);
@@ -639,24 +639,59 @@
 
         .stats-grid {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
-            gap: 0;
+            gap: 3rem;
         }
 
-        .stat-card {
-            flex: 1;
+        .stat-circle-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1.5rem 2rem;
-            text-align: center;
+            gap: 1.25rem;
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .circle-wrapper {
+            position: relative;
+            width: 160px;
+            height: 160px;
+        }
+
+        .progress-ring {
+            width: 160px;
+            height: 160px;
+            transform: rotate(-90deg);
+        }
+
+        .ring-bg {
+            fill: none;
+            stroke: var(--color-border);
+            stroke-width: 7;
+        }
+
+        .ring-fill {
+            fill: none;
+            stroke: url(#ring-gradient);
+            stroke-width: 7;
+            stroke-linecap: round;
+            stroke-dasharray: 326.73;
+            stroke-dashoffset: 326.73;
+            transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .circle-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .stat-big {
             font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
             line-height: 1;
             background: linear-gradient(135deg, #0f2d4a 0%, #1a4d7a 50%, #2563a8 100%);
@@ -665,36 +700,28 @@
             background-clip: text;
         }
 
-        .stat-desc {
-            font-size: 0.9375rem;
-            color: var(--color-text-secondary);
-            font-weight: 400;
-            max-width: 160px;
-            line-height: 1.4;
+        .stat-text {
+            font-size: 1.375rem;
         }
 
-        .stat-divider {
-            width: 1px;
-            height: 60px;
-            background: var(--color-border);
-            flex-shrink: 0;
+        .stat-desc {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            font-weight: 400;
+            max-width: 140px;
+            line-height: 1.4;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
             .stats-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 0;
+                gap: 2rem;
             }
 
-            .stat-divider {
-                display: none;
-            }
-
-            .stat-card {
-                border: 1px solid var(--color-border);
-                border-radius: 0;
-                margin: -0.5px;
+            .stat-circle-card {
+                max-width: 100%;
             }
         }
 
