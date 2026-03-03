@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Principal -->
-    <title>Gestionnaire de Patrimoine à Béthune | Prassets - Conseil Patrimonial</title>
-    <meta name="description" content="Prassets, votre conseiller en gestion de patrimoine à Béthune. Assurance vie, PER, SCPI, optimisation fiscale pour dirigeants et professions libérales du Nord - Pas-de-Calais et des Flandres.">
-    <meta name="keywords" content="gestionnaire de patrimoine Béthune, conseiller gestion patrimoine Béthune, CGP Béthune, optimisation fiscale Pas-de-Calais, assurance vie Béthune, PER Béthune, SCPI Béthune, conseil patrimonial dirigeants, CGP Lille, gestionnaire patrimoine Nord, conseiller patrimoine Flandres, CGP Lestrem, CGP Merville, CGP Hazebrouck">
-    <meta name="author" content="Prassets">
+    <title>Romain Wims — Gestionnaire de Patrimoine à Béthune | Prassets</title>
+    <meta name="description" content="Romain Wims, conseiller en gestion de patrimoine indépendant à Béthune (Prassets). Optimisation fiscale, assurance vie, PER, SCPI pour dirigeants et professions libérales du Nord - Pas-de-Calais.">
+    <meta name="keywords" content="Romain Wims, Romain Wims CGP, Romain Wims Béthune, Romain Wims gestionnaire patrimoine, gestionnaire de patrimoine Béthune, conseiller gestion patrimoine Béthune, CGP Béthune, optimisation fiscale Pas-de-Calais, assurance vie Béthune, PER Béthune, SCPI Béthune, conseil patrimonial dirigeants, CGP Lille, gestionnaire patrimoine Nord, conseiller patrimoine Flandres, CGP Lestrem, CGP Merville, CGP Hazebrouck">
+    <meta name="author" content="Romain Wims">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://prassets.fr/">
 
     <!-- Open Graph (partage réseaux sociaux) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://prassets.fr/">
-    <meta property="og:title" content="Gestionnaire de Patrimoine à Béthune | Prassets">
-    <meta property="og:description" content="Conseil patrimonial sur-mesure pour les dirigeants et professions libérales à Béthune. Assurance vie, PER, SCPI, optimisation fiscale.">
+    <meta property="og:title" content="Romain Wims — Gestionnaire de Patrimoine à Béthune | Prassets">
+    <meta property="og:description" content="Romain Wims, CGP indépendant à Béthune. Conseil patrimonial sur-mesure pour les dirigeants et professions libérales du Nord - Pas-de-Calais.">
     <meta property="og:locale" content="fr_FR">
+
+    <!-- Schema Person (Romain Wims) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Romain Wims",
+        "jobTitle": "Conseiller en Gestion de Patrimoine",
+        "worksFor": {"@type": "Organization", "name": "Prassets"},
+        "address": {"@type": "PostalAddress", "addressLocality": "Béthune", "postalCode": "62400", "addressCountry": "FR"},
+        "url": "https://prassets.fr"
+    }
+    </script>
 
     <!-- Données structurées JSON-LD (Google comprend votre activité) -->
     <script type="application/ld+json">
@@ -27,11 +40,11 @@
         "name": "Prassets",
         "description": "Conseiller en gestion de patrimoine à Béthune, spécialisé dans l'accompagnement des dirigeants, entrepreneurs et professions libérales du Pas-de-Calais.",
         "url": "https://prassets.fr",
-        "telephone": "+33-VOTRE-TELEPHONE",
+        "telephone": "+33781468085",
         "email": "contact@prassets.fr",
+        "employee": {"@type": "Person", "name": "Romain Wims", "jobTitle": "Conseiller en Gestion de Patrimoine"},
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "VOTRE ADRESSE",
             "addressLocality": "Béthune",
             "postalCode": "62400",
             "addressCountry": "FR"
@@ -76,7 +89,7 @@
                 "name": "Le premier rendez-vous avec un gestionnaire de patrimoine est-il gratuit ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Oui, le premier entretien patrimonial avec Prassets est entièrement gratuit et sans engagement. C'est l'occasion d'analyser votre situation et de voir si une collaboration a du sens pour vous."
+                    "text": "Oui, je propose un appel découverte de 20 minutes, offert et sans engagement. L'objectif est de comprendre votre situation et de vérifier si mon accompagnement peut vraiment vous apporter de la valeur."
                 }
             },
             {
@@ -107,6 +120,10 @@
     }
     </script>
 
+    <!-- Préconnexion Calendly (réduit la latence au clic) -->
+    <link rel="preconnect" href="https://assets.calendly.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+
     <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,6 +131,11 @@
 
     <!-- CSS externe -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 </head>
 <body>
     <!-- Dégradé SVG global (réutilisé par les cercles) -->
@@ -129,11 +151,12 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo-text">PRASSETS</div>
+        <div class="logo-text">PRASSETS <span class="logo-sub">par Romain Wims</span></div>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
             <li><a href="#approche">Approche</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:void(0)" data-calendly class="btn-nav">Être rappelé</a></li>
         </ul>
     </nav>
 
@@ -151,77 +174,79 @@
                     <div class="categories-viewport">
                         <span class="category-bullet">→</span>
                         <ul class="categories-scroll">
+                            <li class="category-item">Entrepreneurs</li>
+                            <li class="category-item">Dirigeants</li>
                             <li class="category-item">Chefs d'entreprise</li>
                             <li class="category-item">Professions libérales</li>
                             <li class="category-item">Cadres supérieurs</li>
                             <li class="category-item">Entrepreneurs</li>
                             <li class="category-item">Dirigeants</li>
-                            <!-- Duplication pour boucle infinie -->
                             <li class="category-item">Chefs d'entreprise</li>
                             <li class="category-item">Professions libérales</li>
                             <li class="category-item">Cadres supérieurs</li>
-                            <li class="category-item">Entrepreneurs</li>
-                            <li class="category-item">Dirigeants</li>
                         </ul>
                     </div>
                 </div>
 
                 <p class="hero-subtitle">
-                    Conseil patrimonial sur-mesure pour les dirigeants et professions libérales. 
-                    Investissements, optimisation fiscale et stratégie patrimoine.
+                    Romain Wims, gestionnaire de patrimoine à Béthune. Conseil patrimonial sur-mesure pour les dirigeants et professions libérales. Investissements, optimisation fiscale et stratégie patrimoniale.
                 </p>
 
                 <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">
-                        <span>Prendre rendez-vous</span>
+                    <a href="javascript:void(0)" data-calendly class="btn-primary">
+                        <span>Je veux être rappelé</span>
                     </a>
                     <a href="#services" class="btn-secondary">
-                        <span>Nos services</span>
+                        <span>Découvrir les services</span>
                     </a>
+                </div>
+
+                <div class="hero-social-proof">
+                    <div class="hero-proof-stars">★★★★★</div>
+                    <span>50+ dirigeants et professions libérales accompagnés dans le Nord&nbsp;–&nbsp;Pas-de-Calais</span>
                 </div>
             </div>
 
             <!-- Colonne Droite : Photo -->
             <div class="hero-image">
-                <img src="assets/images/romain-photo.png" alt="Romain - Conseiller en Gestion de Patrimoine">
+                <img src="assets/images/romain-photo.png" alt="Romain Wims — Conseiller en Gestion de Patrimoine indépendant à Béthune">
+                <!-- Widget flottant -->
+                <div class="hero-widget">
+                    <div class="hero-widget-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        <span>PATRIMOINE GLOBAL</span>
+                        <span class="hero-widget-badge">+8,4% /AN</span>
+                    </div>
+                    <div class="hero-widget-amount">1 200 000 €</div>
+                    <div class="hero-widget-bars">
+                        <div class="hero-widget-bar-row">
+                            <span class="hero-widget-dot" style="background:#f59e0b;"></span>
+                            <span class="hero-widget-label">Assurance vie</span>
+                            <div class="hero-widget-bar-track"><div class="hero-widget-bar-fill" style="width:45%;background:#f59e0b;"></div></div>
+                            <span class="hero-widget-pct">45%</span>
+                        </div>
+                        <div class="hero-widget-bar-row">
+                            <span class="hero-widget-dot" style="background:#10b981;"></span>
+                            <span class="hero-widget-label">SCPI</span>
+                            <div class="hero-widget-bar-track"><div class="hero-widget-bar-fill" style="width:30%;background:#10b981;"></div></div>
+                            <span class="hero-widget-pct">30%</span>
+                        </div>
+                        <div class="hero-widget-bar-row">
+                            <span class="hero-widget-dot" style="background:#8b5cf6;"></span>
+                            <span class="hero-widget-label">Private Equity</span>
+                            <div class="hero-widget-bar-track"><div class="hero-widget-bar-fill" style="width:25%;background:#8b5cf6;"></div></div>
+                            <span class="hero-widget-pct">25%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Bandeau Produits (style Ramify) -->
+    <!-- Bandeau Produits (scroll infini JS) -->
     <section class="banner-section products-banner">
-        <div class="banner-container">
-            <div class="banner-scroll">
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                    Assurance vie
-                </div>
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    PER
-                </div>
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                    PEA
-                </div>
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-                    SCPI
-                </div>
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    Private Equity
-                </div>
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                    LMNP
-                </div>
-                <div class="banner-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    Contrat de capitalisation
-                </div>
-                
-                <!-- Duplication pour scroll infini -->
+        <div class="products-track">
+            <div class="banner-set">
                 <div class="banner-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
                     Assurance vie
@@ -254,10 +279,10 @@
         </div>
     </section>
 
-    <!-- Bandeau Partenaires -->
+    <!-- Bandeau Partenaires (scroll infini JS) -->
     <section class="banner-section partners-banner">
-        <div class="banner-container">
-            <div class="banner-scroll">
+        <div class="partners-track">
+            <div class="banner-set">
                 <div class="partner-logo">Generali</div>
                 <div class="partner-logo">CNP Assurances</div>
                 <div class="partner-logo">Swiss Life</div>
@@ -266,77 +291,6 @@
                 <div class="partner-logo">AXA</div>
                 <div class="partner-logo">Allianz</div>
                 <div class="partner-logo">BNP Paribas</div>
-                
-                <!-- Duplication -->
-                <div class="partner-logo">Generali</div>
-                <div class="partner-logo">CNP Assurances</div>
-                <div class="partner-logo">Swiss Life</div>
-                <div class="partner-logo">Crédit Agricole</div>
-                <div class="partner-logo">La Mondiale</div>
-                <div class="partner-logo">AXA</div>
-                <div class="partner-logo">Allianz</div>
-                <div class="partner-logo">BNP Paribas</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Chiffres Clés -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-
-                <div class="stat-circle-card">
-                    <div class="circle-wrapper">
-                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
-                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
-                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="65"/>
-                        </svg>
-                        <div class="circle-content">
-                            <span class="stat-big" data-target="50" data-prefix="+" data-suffix="" data-decimals="0">+50</span>
-                        </div>
-                    </div>
-                    <span class="stat-desc">clients accompagnés</span>
-                </div>
-
-                <div class="stat-circle-card">
-                    <div class="circle-wrapper">
-                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
-                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
-                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="80"/>
-                        </svg>
-                        <div class="circle-content">
-                            <span class="stat-big" data-target="2.5" data-prefix="" data-suffix="M€" data-decimals="1">2,5M€</span>
-                        </div>
-                    </div>
-                    <span class="stat-desc">d'encours sous gestion</span>
-                </div>
-
-                <div class="stat-circle-card">
-                    <div class="circle-wrapper">
-                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
-                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
-                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="100"/>
-                        </svg>
-                        <div class="circle-content">
-                            <span class="stat-big" data-target="100" data-prefix="" data-suffix="%" data-decimals="0">100%</span>
-                        </div>
-                    </div>
-                    <span class="stat-desc">indépendant, sans conflit d'intérêt</span>
-                </div>
-
-                <div class="stat-circle-card">
-                    <div class="circle-wrapper">
-                        <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
-                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
-                            <circle class="ring-fill" cx="60" cy="60" r="52" data-percent="100"/>
-                        </svg>
-                        <div class="circle-content">
-                            <span class="stat-big stat-text">Gratuit</span>
-                        </div>
-                    </div>
-                    <span class="stat-desc">premier rendez-vous, sans engagement</span>
-                </div>
-
             </div>
         </div>
     </section>
@@ -395,37 +349,6 @@
         </div>
     </section>
 
-    <!-- Section Contenu Local SEO -->
-    <section class="local-content-section">
-        <div class="container">
-            <div class="local-content-inner">
-                <div class="local-content-text">
-                    <h2>Votre conseiller en gestion de patrimoine à Béthune</h2>
-                    <p>Gérer son patrimoine dans le Pas-de-Calais demande un interlocuteur de proximité, qui connaît votre environnement économique et fiscal. En tant que <strong>CGP indépendant basé à Béthune</strong>, j'accompagne les chefs d'entreprise, dirigeants, médecins, avocats et cadres supérieurs de la région dans la construction d'un patrimoine solide et optimisé.</p>
-                    <p>La région de Béthune, entre Lens, Arras et Lille, concentre un tissu dense de PME et de professions libérales dont les revenus élevés appellent une gestion patrimoniale active. Pourtant, beaucoup s'en remettent encore à leur banque habituelle, qui ne peut proposer que ses propres produits. Un <strong>conseiller en gestion de patrimoine indépendant</strong> accède à l'ensemble du marché : plus de 30 assureurs, des centaines de fonds, et les meilleures SCPI du moment.</p>
-                    <p>Que votre priorité soit de <strong>réduire vos impôts</strong>, de préparer votre retraite, d'investir dans l'immobilier sans contraintes de gestion ou de protéger votre famille, Prassets construit avec vous une stratégie patrimoniale globale, évolutive et vraiment adaptée à votre vie.</p>
-                </div>
-                <div class="local-content-aside">
-                    <div class="local-highlight">
-                        <h3>Zones d'intervention</h3>
-                        <ul class="zones-list">
-                            <li>Béthune <span class="zone-tag">Siège</span></li>
-                            <li>Lens &amp; Hénin-Beaumont</li>
-                            <li>Arras &amp; Cambrai</li>
-                            <li>Lestrem, Merville &amp; Laventie</li>
-                            <li>Lille &amp; Métropole lilloise</li>
-                            <li>Flandres (Hazebrouck, Bailleul...)</li>
-                            <li>Tout le Nord - Pas-de-Calais</li>
-                        </ul>
-                        <a href="#contact" class="btn-primary" style="margin-top: 1.5rem; display: inline-flex;">
-                            <span>Prendre rendez-vous</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Section Approche -->
     <section id="approche" class="approche-section">
         <div class="container">
@@ -458,19 +381,52 @@
                     </div>
                 </div>
                 <div class="approche-aside">
-                    <div class="approche-stat">
-                        <span class="stat-number">+50</span>
-                        <span class="stat-label">Clients accompagnés</span>
+                    <p class="approche-aside-note">Enregistré à l'ORIAS en tant que Conseiller en Investissements Financiers (CIF) et Courtier en Assurance (COA). Agréé AMF. Membre ANACOFI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section id="avis" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ce que disent nos clients</h2>
+                <p>Des dirigeants et professions libérales du Nord&nbsp;–&nbsp;Pas-de-Calais accompagnés.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Romain a complètement restructuré ma stratégie patrimoniale. En un an, j'ai économisé plusieurs milliers d'euros d'impôts grâce au PER et à la réorganisation de mes contrats."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M.D</div>
+                        <div>
+                            <strong>Marc D.</strong>
+                            <span>Gérant de PME, Béthune</span>
+                        </div>
                     </div>
-                    <div class="approche-stat">
-                        <span class="stat-number">2,5M€</span>
-                        <span class="stat-label">Encours sous gestion</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Ce que j'apprécie, c'est d'avoir un seul interlocuteur qui connaît vraiment ma situation. Fini les conseillers qui changent tous les deux ans à la banque."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S.L</div>
+                        <div>
+                            <strong>Sophie L.</strong>
+                            <span>Médecin libéral, Lens</span>
+                        </div>
                     </div>
-                    <div class="approche-stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Indépendant</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Très professionnel et pédagogue. Il prend le temps d'expliquer chaque placement. J'ai enfin l'impression de comprendre où va mon argent et pourquoi."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">T.V</div>
+                        <div>
+                            <strong>Thomas V.</strong>
+                            <span>Dirigeant, Arras</span>
+                        </div>
                     </div>
-                    <p class="approche-aside-note">Enregistré à l'ORIAS en tant que Conseiller en Investissements Financiers (CIF) et Courtier en Assurance (COA).</p>
                 </div>
             </div>
         </div>
@@ -493,10 +449,10 @@
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">
-                        Le premier rendez-vous est-il vraiment gratuit ?
+                        Le premier échange est-il vraiment gratuit ?
                         <span class="faq-icon">+</span>
                     </summary>
-                    <p class="faq-answer">Oui, le premier entretien patrimonial est entièrement gratuit et sans engagement. C'est l'occasion de faire connaissance, d'analyser votre situation et de voir si une collaboration a du sens pour vous. Aucune décision ni souscription n'est attendue lors de ce premier échange.</p>
+                    <p class="faq-answer">Oui, je propose un appel découverte de 20 minutes, offert et sans engagement. L'objectif n'est pas de vendre : c'est de comprendre votre situation et de vérifier honnêtement si je peux vous apporter une vraie valeur. Si ce n'est pas le cas, je vous le dirai clairement.</p>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">
@@ -517,7 +473,7 @@
                         Intervenez-vous en dehors de Béthune ?
                         <span class="faq-icon">+</span>
                     </summary>
-                    <p class="faq-answer">Oui, j'accompagne des clients dans tout le Nord - Pas-de-Calais : Lens, Arras, Liévin, Hénin-Beaumont, Bruay-la-Buissière, Lestrem, Merville, mais aussi Lille et les Flandres (Hazebrouck, Bailleul...). Je me déplace volontiers à votre cabinet ou domicile. Des rendez-vous en visioconférence sont également possibles.</p>
+                    <p class="faq-answer">Oui, j'accompagne des clients dans tout le Nord - Pas-de-Calais : Lens, Arras, Liévin, Hénin-Beaumont, Bruay-la-Buissière, Lestrem, Merville, mais aussi Lille et les Flandres (Hazebrouck, Bailleul...). On commence toujours par un appel de 20 minutes, puis si notre collaboration fait sens, je me déplace à votre cabinet ou domicile. Les rendez-vous en visioconférence sont également possibles.</p>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">
@@ -526,35 +482,10 @@
                     </summary>
                     <p class="faq-answer">La relation est pensée sur le long terme. Après un bilan patrimonial initial et la mise en place de votre stratégie, nous faisons des points réguliers (généralement annuels) pour ajuster en fonction de l'évolution de votre situation personnelle, fiscale et des marchés financiers.</p>
                 </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Avis Google -->
-    <section id="avis" class="reviews-section">
-        <div class="container">
-            <h2>Ce que disent nos clients</h2>
-            
-            <!-- Widget Google Reviews à intégrer -->
-            <div class="google-reviews-widget">
-                <!-- Tu pourras insérer ton widget Elfsight ici -->
-                <p style="color: var(--color-text-secondary); text-align: center;">
-                    Widget Google Reviews à configurer sur 
-                    <a href="https://elfsight.com/google-reviews-widget/" target="_blank" style="color: var(--color-primary);">Elfsight</a>
-                </p>
-            </div>
-
-            <!-- Bouton vers Google -->
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.google.com/search?q=Prassets" target="_blank" class="btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                    </svg>
-                    <span>Voir nos avis Google</span>
-                </a>
+            <!-- CTA fin de FAQ -->
+            <div class="faq-closing-cta">
+                <p>Une question spécifique à votre situation ?</p>
+                <a href="javascript:void(0)" data-calendly class="btn-primary"><span>Je veux être rappelé</span></a>
             </div>
         </div>
     </section>
@@ -562,52 +493,52 @@
     <!-- Section Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="contact-inner">
-                <div class="contact-info">
-                    <h2>Prenons rendez-vous</h2>
-                    <p>Un premier entretien gratuit et sans engagement pour faire le point sur votre situation patrimoniale. Je me déplace sur Béthune, Lille, dans les Flandres et partout dans le Nord - Pas-de-Calais.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Béthune, Pas-de-Calais (62)</span>
-                        </div>
-                        <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a>
-                        </div>
-                        <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="mailto:contact@prassets.fr">contact@prassets.fr</a>
-                        </div>
+            <div class="contact-simple">
+                <h2>Un échange pour voir si je peux vous aider</h2>
+                <p>Avant toute chose, un appel de 20 minutes pour comprendre votre situation et vérifier ensemble si mon accompagnement correspond vraiment à vos besoins.<br>Je ne travaille qu'avec des clients pour lesquels je suis convaincu de pouvoir apporter une vraie valeur.</p>
+                <div class="contact-reassurance">
+                    <div class="contact-reassurance-item">
+                        <span class="reassurance-check">✓</span> 20 min, offert et sans engagement
+                    </div>
+                    <div class="contact-reassurance-item">
+                        <span class="reassurance-check">✓</span> Pour vérifier si je peux réellement vous être utile
+                    </div>
+                    <div class="contact-reassurance-item">
+                        <span class="reassurance-check">✓</span> Places limitées — je travaille avec peu de clients
                     </div>
                 </div>
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-                        </div>
+                <a href="javascript:void(0)" data-calendly class="btn-primary btn-large">
+                    <span>Je veux être rappelé</span>
+                </a>
+                <p class="contact-alt">Ou directement : <a href="tel:+33781468085">07 81 46 80 85</a> &middot; <a href="mailto:contact@prassets.fr">contact@prassets.fr</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contenu Local SEO -->
+    <section class="local-content-section">
+        <div class="container">
+            <div class="local-content-inner">
+                <div class="local-content-text">
+                    <h2>Votre conseiller en gestion de patrimoine à Béthune</h2>
+                    <p>Gérer son patrimoine dans le Pas-de-Calais demande un interlocuteur de proximité, qui connaît votre environnement économique et fiscal. En tant que <strong>CGP indépendant basé à Béthune</strong>, j'accompagne les chefs d'entreprise, dirigeants, médecins, avocats et cadres supérieurs de la région dans la construction d'un patrimoine solide et optimisé.</p>
+                    <p>La région de Béthune, entre Lens, Arras et Lille, concentre un tissu dense de PME et de professions libérales dont les revenus élevés appellent une gestion patrimoniale active. Pourtant, beaucoup s'en remettent encore à leur banque habituelle, qui ne peut proposer que ses propres produits. Un <strong>conseiller en gestion de patrimoine indépendant</strong> accède à l'ensemble du marché : plus de 30 assureurs, des centaines de fonds, et les meilleures SCPI du moment.</p>
+                    <p>Que votre priorité soit de <strong>réduire vos impôts</strong>, de préparer votre retraite, d'investir dans l'immobilier sans contraintes de gestion ou de protéger votre famille, Prassets construit avec vous une stratégie patrimoniale globale, évolutive et vraiment adaptée à votre vie.</p>
+                </div>
+                <div class="local-content-aside">
+                    <div class="local-highlight">
+                        <h3>Zones d'intervention</h3>
+                        <ul class="zones-list">
+                            <li>Béthune <span class="zone-tag">Siège</span></li>
+                            <li>Lens &amp; Hénin-Beaumont</li>
+                            <li>Arras &amp; Cambrai</li>
+                            <li>Lestrem, Merville &amp; Laventie</li>
+                            <li>Lille &amp; Métropole lilloise</li>
+                            <li>Flandres (Hazebrouck, Bailleul...)</li>
+                            <li>Tout le Nord - Pas-de-Calais</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="votre@email.fr" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Votre situation</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Décrivez brièvement votre situation et vos objectifs patrimoniaux..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary btn-full">
-                        <span>Envoyer ma demande</span>
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -618,6 +549,7 @@
             <div class="footer-inner">
                 <div class="footer-brand">
                     <div class="logo-text">PRASSETS</div>
+                    <p style="font-weight:500; color:rgba(255,255,255,0.75); margin-bottom:0.4rem;">Romain Wims — CGP Indépendant</p>
                     <p>Conseil en gestion de patrimoine à Béthune, Lille et dans tout le Nord - Pas-de-Calais.</p>
                 </div>
                 <div class="footer-links">
@@ -629,7 +561,7 @@
                     <a href="articles/assurance-vie-dirigeant.html">Assurance vie dirigeant</a>
                 </div>
                 <div class="footer-legal">
-                    <p>Enregistré à l'ORIAS. Conseiller en Investissements Financiers (CIF) et Courtier en Assurance (COA).</p>
+                    <p>Enregistré à l'ORIAS — CIF &amp; COA. Agréé AMF. Membre ANACOFI. Supervisé ACPR.</p>
                     <p>&copy; 2026 Prassets. Tous droits réservés.</p>
                 </div>
             </div>
@@ -638,5 +570,6 @@
 
     <!-- JavaScript externe -->
     <script src="assets/js/script.js"></script>
+
 </body>
 </html>

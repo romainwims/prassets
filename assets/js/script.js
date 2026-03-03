@@ -1,3 +1,68 @@
+        // ===== CALENDLY POPUP =====
+        const CALENDLY_URL = 'https://calendly.com/romain-wims/rendez-vous-decouverte-offert';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-calendly]').forEach(el => {
+                el.addEventListener('click', e => {
+                    e.preventDefault();
+                    if (window.Calendly) {
+                        Calendly.initPopupWidget({ url: CALENDLY_URL });
+                    } else {
+                        window.open(CALENDLY_URL, '_blank');
+                    }
+                });
+            });
+        });
+
+        // ===== BANDEAUX DÉFILANTS INFINIS =====
+        function initMarquee(section, trackSelector, speed) {
+            const track = section.querySelector(trackSelector);
+            if (!track) return;
+
+            // Désactiver l'animation CSS — JS prend le relais
+            track.style.animation = 'none';
+            track.style.transform = 'translateX(0)';
+
+            const firstSet = track.firstElementChild;
+            if (!firstSet) return;
+
+            const setWidth = firstSet.offsetWidth;
+
+            // Cloner jusqu'à couvrir 3× la largeur de l'écran
+            while (track.offsetWidth < window.innerWidth * 3) {
+                const clone = firstSet.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                // Supprimer les defs SVG des clones : ils référencent les originaux via l'ID du document
+                clone.querySelectorAll('defs').forEach(d => d.remove());
+                track.appendChild(clone);
+            }
+
+            let x = 0;
+            let paused = false;
+            let lastTs = null;
+
+            section.addEventListener('mouseenter', () => paused = true);
+            section.addEventListener('mouseleave', () => paused = false);
+
+            function tick(ts) {
+                if (lastTs !== null && !paused) {
+                    x -= speed * (ts - lastTs) / 1000;
+                    if (x <= -setWidth) x += setWidth;
+                    track.style.transform = 'translateX(' + x + 'px)';
+                }
+                lastTs = ts;
+                requestAnimationFrame(tick);
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        const productsBanner = document.querySelector('.products-banner');
+        const partnersBanner = document.querySelector('.partners-banner');
+        if (productsBanner) initMarquee(productsBanner, '.products-track', 45);
+        if (partnersBanner) initMarquee(partnersBanner, '.partners-track', 30);
+
+
         // ===== ANIMATION CATÉGORIES (slot machine) =====
         const categoryItems = document.querySelectorAll('.category-item');
         const viewport = document.querySelector('.categories-viewport');
@@ -35,57 +100,3 @@
         requestAnimationFrame(updateActiveItem);
 
 
-        // ===== ANIMATION CERCLES CHIFFRES CLÉS =====
-        const CIRCUMFERENCE = 2 * Math.PI * 52; // 326.73
-
-        function animateRing(circle, targetPercent) {
-            const offset = CIRCUMFERENCE * (1 - targetPercent / 100);
-            circle.style.strokeDashoffset = offset;
-        }
-
-        function animateCounter(el, target, duration) {
-            const prefix = el.dataset.prefix || '';
-            const suffix = el.dataset.suffix || '';
-            const decimals = parseInt(el.dataset.decimals || '0');
-            const start = performance.now();
-
-            function update(now) {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
-                const current = eased * target;
-                const display = decimals > 0
-                    ? current.toFixed(decimals).replace('.', ',')
-                    : Math.round(current).toString();
-                el.textContent = prefix + display + suffix;
-                if (progress < 1) requestAnimationFrame(update);
-            }
-
-            requestAnimationFrame(update);
-        }
-
-        const statsSection = document.querySelector('.stats-section');
-
-        if (statsSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-
-                    // Animer les cercles
-                    statsSection.querySelectorAll('.ring-fill').forEach(circle => {
-                        const percent = parseFloat(circle.dataset.percent);
-                        animateRing(circle, percent);
-                    });
-
-                    // Animer les compteurs
-                    statsSection.querySelectorAll('[data-target]').forEach(el => {
-                        const target = parseFloat(el.dataset.target);
-                        animateCounter(el, target, 2000);
-                    });
-
-                    observer.unobserve(statsSection);
-                });
-            }, { threshold: 0.3 });
-
-            observer.observe(statsSection);
-        }
