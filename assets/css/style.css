@@ -200,10 +200,10 @@
             bottom: 24px;
             left: 24px;
             background: #fff;
-            border-radius: 14px;
-            padding: 12px 14px;
+            border-radius: 16px;
+            padding: 16px 18px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.16);
-            min-width: 190px;
+            min-width: 230px;
             z-index: 10;
             animation: widget-float 3.5s ease-in-out infinite;
         }
@@ -213,11 +213,11 @@
             align-items: center;
             gap: 5px;
             color: #10b981;
-            font-size: 0.62rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .hero-widget-badge {
@@ -225,35 +225,35 @@
             background: #d1fae5;
             color: #065f46;
             border-radius: 20px;
-            padding: 2px 6px;
-            font-size: 0.62rem;
+            padding: 2px 8px;
+            font-size: 0.7rem;
             font-weight: 700;
         }
 
         .hero-widget-amount {
-            font-size: 1.2rem;
+            font-size: 1.45rem;
             font-weight: 700;
             color: var(--color-primary);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             letter-spacing: -0.02em;
         }
 
         .hero-widget-bars {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 7px;
         }
 
         .hero-widget-bar-row {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 0.68rem;
+            gap: 7px;
+            font-size: 0.75rem;
         }
 
         .hero-widget-dot {
-            width: 7px;
-            height: 7px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             flex-shrink: 0;
         }
@@ -261,14 +261,14 @@
         .hero-widget-label {
             color: #6b7280;
             flex-shrink: 0;
-            min-width: 72px;
+            min-width: 85px;
         }
 
         .hero-widget-bar-track {
             flex: 1;
             background: #f3f4f6;
             border-radius: 4px;
-            height: 4px;
+            height: 5px;
             overflow: hidden;
         }
 
@@ -280,7 +280,7 @@
         .hero-widget-pct {
             color: #374151;
             font-weight: 600;
-            min-width: 26px;
+            min-width: 28px;
             text-align: right;
         }
 
