@@ -1,6 +1,12 @@
         // ===== CALENDLY POPUP =====
         const CALENDLY_URL = 'https://calendly.com/romain-wims/rendez-vous-decouverte-offert';
 
+        // Charger le CSS Calendly en async (non-bloquant pour le rendu)
+        const calendlyCSS = document.createElement('link');
+        calendlyCSS.rel = 'stylesheet';
+        calendlyCSS.href = 'https://assets.calendly.com/assets/external/widget.css';
+        document.head.appendChild(calendlyCSS);
+
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('[data-calendly]').forEach(el => {
                 el.addEventListener('click', e => {
