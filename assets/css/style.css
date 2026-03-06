@@ -51,6 +51,22 @@
             align-items: center;
         }
 
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(15, 45, 74, 0.15);
+        }
+
         .logo-text {
             font-family: var(--font-display);
             font-size: 1.5rem;
@@ -976,6 +992,15 @@
             align-items: start;
         }
 
+        .approche-tagline {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
         .approche-content h2 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
@@ -1210,15 +1235,13 @@
 
         /* ===== NAVBAR ADDITIONS ===== */
         .logo-sub {
-            font-family: var(--font-body);
-            font-size: 0.75rem;
+            font-family: var(--font-display);
+            font-size: 0.95rem;
             font-weight: 400;
+            font-style: italic;
             color: var(--color-text-secondary);
-            letter-spacing: 0;
-            text-transform: none;
-            display: block;
-            line-height: 1;
-            margin-top: 0.15rem;
+            display: inline;
+            margin-left: 0.4rem;
         }
 
         .btn-nav {
@@ -1469,5 +1492,77 @@
             font-weight: 700;
             font-size: 1.1rem;
             flex-shrink: 0;
+        }
+
+        /* ===== SECTION RESSOURCES ===== */
+        .ressources-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-background);
+        }
+
+        .ressources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .ressource-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 1.75rem;
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .ressource-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 8px 24px rgba(15, 45, 74, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .ressource-card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--color-primary);
+            background: rgba(26, 77, 122, 0.08);
+            padding: 0.25rem 0.625rem;
+            border-radius: 6px;
+            width: fit-content;
+        }
+
+        .ressource-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            line-height: 1.35;
+        }
+
+        .ressource-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .ressource-card-link {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-top: auto;
+        }
+
+        @media (max-width: 968px) {
+            .ressources-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
